@@ -1,0 +1,260 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* background-color: #62c4f1; */
+
+    /* background-color: #62c4f1; */
+    /* background: rgb(31,16,35);
+    background: linear-gradient(180deg, rgba(31,16,35,1) 0%, rgba(35,53,71,1) 61%); */
+    
+  }
+
+body{
+    background-color: #62c4f1;
+}
+  
+  nav li, nav a, button{
+    /* font-family:  */
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: #040000;
+    text-decoration: none;
+    /* font-family: 'Abel', sans-serif; */
+    /* font-family: 'Arimo', sans-serif; */
+    /* font-family: 'Black Ops One', cursive; */
+    font-family: 'Fragment Mono', monospace;
+    /* font-family: 'Pixelify Sans', cursive; */
+    /* font-family: 'Poppins', sans-serif; */
+    /* font-family: 'Roboto', sans-serif; */
+  
+  
+  }
+  
+  header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2rem 1rem;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  
+  }
+  
+  .logo{
+    cursor: pointer;
+    margin-right: auto;
+    /* font-family: 'Pixelify Sans', cursive; */
+    font-family: 'Black Ops One', cursive;
+    font-size: 3rem;
+  }
+  
+  .fhalf{
+    color: #172e41;
+  }
+  .shalf{
+    color: #fefefc;
+  }
+  
+  .nav_links{
+    list-style: none;
+  }
+  
+  .nav_links li{
+    display: inline-block;
+    padding: 0rem 1.5rem;
+  }
+  
+  
+  .nav_links li a {
+    transition: all 0.3s ease 0s;
+  }
+  .nav_links li a:hover{
+    color: #eb72ae;
+  }
+  
+  #last
+  {
+    margin-right: 2rem;
+    }
+  
+  /* Button */
+  
+  .btn {
+    position: relative;
+    font-size: 17px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1em 2.5em;
+    display: inline-block;
+    border-radius: 50px;
+    transition: all .3s;
+    border: none;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    color: #eaeeed;
+    background-color: #1b5dac;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn:active {
+    transform: scale(0.95);
+    box-shadow: none;
+  }
+  
+  .btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+  }
+  
+  .btn::after {
+    background-color: #2980b9;
+  }
+  
+  .btn:hover::after {
+    transform: scaleX(1.2) scaleY(1.4);
+    opacity: 0;
+  }
+  
+  /* ====================================================================================================================================================================== */
+  /* ====================================================================================================================================================================== */
+  /* ====================================================================================================================================================================== */
+
+main{
+    /* background-color: #fefefc61; */
+    z-index: 0;
+    padding: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; */
+}
+/* main image{
+    position: absolute;
+    height: 20rem;
+} */
+.heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading h1{
+    font-family: 'Black Ops One', cursive;
+    font-size: 4rem;
+    color: #172e41;
+}
+
+.heading span{
+    color: #353b8d;
+}
+
+.heading p{
+   font-family: 'Poppins', sans-serif;
+   font-size: 1rem;
+   font-weight: 700;
+   margin-bottom: 3rem;
+}
+
+.result
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result h2{
+    font-family: 'Fragment Mono', monospace;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.result h3{
+    /* font-family: 'Abel', sans-serif; */
+    /* font-family: 'Arimo', sans-serif; */
+    /* font-family: 'Black Ops One', cursive; */
+    /* font-family: 'Fragment Mono', monospace; */
+    /* font-family: 'Pixelify Sans', cursive; */
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+}
+
+.result p {
+    font-family: 'Abel', sans-serif;
+    font-size: 1.3rem;
+    /* margin-bottom: 1rem; */
+}
+
+#AAA{
+    margin-bottom: 3rem;
+}
+
+  /* ====================================================================================================================================================================== */
+  /* ====================================================================================================================================================================== */
+  /* ====================================================================================================================================================================== */
+.buttons button {
+    appearance: none;
+    background-color: #1b5dac;
+    border: 0.125em solid #1A1A1A;
+    border-radius: 0.9375em;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 20px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 3.75em;
+    min-width: 0;
+    outline: none;
+    padding: 1em 2.3em;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+}
+   
+.buttons button:disabled {
+    pointer-events: none;
+}
+   
+.buttons button:hover {
+    color: #fff;
+    background-color: #10024d;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+   
+.buttons button:active {
+    box-shadow: none;
+    transform: translateY(0);
+}

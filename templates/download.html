@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/upload.css') }}">
+        <title>CloudCryptic | EASS</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Abel&family=Arimo:wght@500&family=Black+Ops+One&family=Fragment+Mono&family=Pixelify+Sans:wght@700&family=Poppins&family=Roboto&display=swap" rel="stylesheet">
+
+        <style>
+            body {
+              background-color: #62c4f1;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1 class="logo"><span class="fhalf">Cloud</span><span class="shalf">Cryptic</span></h1>
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Encryption Standards</a></li>
+                    <li><a href="#" id = "last">About</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="cta">
+                <button class="btn">Contact</button>
+            </a>
+        </header>
+
+        <main>
+            <div class="text_Stuff">
+                <h1>
+                    Cloud<span>Cryptic</span>
+                </h1>
+                <h2>Decryption</h2>
+                <p>
+                    Welcome to our platform, where accessing your decrypted files is a breeze. Our user-friendly interface makes it effortless for you to upload your encryption key. Once uploaded, our system securely retrieves the key, allowing us to unlock your encrypted files. The process is straightforward and ensures that your sensitive data remains accessible only to you. With a few clicks, you can retrieve your decrypted files, preserving the security and privacy of your information. Experience the ease and peace of mind that comes with our efficient key uploading process for seamless file decryption. Your data, your control – made simple.
+                </p>
+                <!-- <img src="static\img\login.png" alt=""> -->
+            </div>
+            <div class="input_area">
+                <div class="file_input">
+                    <form action="/download_data" method="POST" enctype="multipart/form-data">
+                        <input type="file" name = "file" class="FileInput">
+                        
+                        <button class = "Upload_btn" type="submit" id = "top_btn"> <span>Upload</span>
+                        </button>
+                        
+    
+                        <a href="/home">
+                            <button class = "Upload_btn" type="button"> <span>Back to Home</span></button>
+                        </a>
+                    </form>
+
+                </div>
+
+            </div>
+        </main>
+    </body>
+</html>

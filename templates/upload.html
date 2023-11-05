@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/upload.css') }}">
+        <title>CloudCryptic | EASS</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Abel&family=Arimo:wght@500&family=Black+Ops+One&family=Fragment+Mono&family=Pixelify+Sans:wght@700&family=Poppins&family=Roboto&display=swap" rel="stylesheet">
+
+        <style>
+            body {
+              background-color: #62c4f1;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1 class="logo"><span class="fhalf">Cloud</span><span class="shalf">Cryptic</span></h1>
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Encryption Standards</a></li>
+                    <li><a href="#" id = "last">About</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="cta">
+                <button class="btn">Contact</button>
+            </a>
+        </header>
+
+        <main>
+            <div class="text_Stuff">
+                <h1>
+                    Cloud<span>Cryptic</span>
+                </h1>
+                <h2>Encryption</h2>
+                <p>
+                    Our platform simplifies the file upload and encryption process. With a single click, you can securely upload your files. We employ advanced hybrid encryption algorithms to protect your data from any unauthorized access. Your encryption key is stored in AWS for security, and a copy is sent directly to your email through AWS SES. This two-step process ensures your data remains confidential and easily accessible only to you. Enjoy the convenience and peace of mind that comes with our streamlined approach to secure file upload and encryption. Your data's protection is our top priority, made effortlessly simple.
+                </p>
+                <!-- <img src="static\img\login.png" alt=""> -->
+            </div>
+            <div class="input_area">
+                <div class="file_input">
+                    <form action="/data" method="POST" enctype="multipart/form-data">
+                        <input type="file" name = "file" class="FileInput">
+                        <a href="upload">
+                            <button class = "Upload_btn" type="submit" id = "top_btn"> <span>Upload</span>
+                            </button>
+                        </a>
+    
+                        <a href="/home">
+                            <button class = "Upload_btn" type="button"> <span>Back to Home</span></button>
+                        </a>
+                    </form>
+
+                </div>
+
+            </div>
+        </main>
+    </body>
+</html>

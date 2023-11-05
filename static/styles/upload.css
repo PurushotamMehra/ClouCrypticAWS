@@ -1,0 +1,439 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+    /* background-color: #62c4f1; */
+    /* background: rgb(31,16,35);
+    background: linear-gradient(180deg, rgba(31,16,35,1) 0%, rgba(35,53,71,1) 61%); */
+    
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+  
+nav li, nav a, button{
+    /* font-family:  */
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: #040000;
+    text-decoration: none;
+    /* font-family: 'Abel', sans-serif; */
+    /* font-family: 'Arimo', sans-serif; */
+    /* font-family: 'Black Ops One', cursive; */
+    font-family: 'Fragment Mono', monospace;
+    /* font-family: 'Pixelify Sans', cursive; */
+    /* font-family: 'Poppins', sans-serif; */
+    /* font-family: 'Roboto', sans-serif; */
+  
+  
+}
+  
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2rem 1rem;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  
+}
+  
+  .logo{
+    cursor: pointer;
+    margin-right: auto;
+    /* font-family: 'Pixelify Sans', cursive; */
+    font-size: 3rem;
+    font-family: 'Black Ops One', cursive;
+
+  }
+  
+  .fhalf{
+    color: #172e41;
+  }
+  .shalf{
+    color: #fefefc;
+  }
+  
+  .nav_links{
+    list-style: none;
+  }
+  
+  .nav_links li{
+    display: inline-block;
+    padding: 0rem 1.5rem;
+  }
+  
+  
+  .nav_links li a {
+    transition: all 0.3s ease 0s;
+  }
+  .nav_links li a:hover{
+    color: #eb72ae;
+  }
+  
+  #last
+  {
+    margin-right: 2rem;
+    }
+  
+  /* Button */
+  
+  .btn {
+    position: relative;
+    font-size: 17px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1em 2.5em;
+    display: inline-block;
+    border-radius: 50px;
+    transition: all .3s;
+    border: none;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    color: #eaeeed;
+    background-color: #1b5dac;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn:active {
+    transform: scale(0.95);
+    box-shadow: none;
+  }
+  
+  .btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+  }
+  
+  .btn::after {
+    background-color: #2980b9;
+  }
+  
+  .btn:hover::after {
+    transform: scaleX(1.2) scaleY(1.4);
+    opacity: 0;
+  }
+  
+  
+  /* ====================================================================================================================================================================== */
+  /* ====================================================================================================================================================================== */
+  /* ====================================================================================================================================================================== */
+main{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 80vh;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f8f8f680;
+    margin-top: 2rem;
+    border-radius: 30px;
+
+}
+
+.text_Stuff{
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f8f690;
+    border-radius: 30px;
+    width: 55%;
+    /* margin-right: 3%; */
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+    padding-top: 8%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+    height: auto;
+
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+    /* background-color: #00bfdc; */
+    /* padding-left: 3rem; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.text_Stuff h1{
+    font-size: 5rem;
+    font-family: 'Black Ops One', cursive;
+    color: #172e41;
+}
+
+.text_Stuff h2{
+  font-size: 2rem;
+  font-family: 'Black Ops One', cursive;
+  color: #172e41;
+  padding-bottom: 0.5rem;
+}
+
+.text_Stuff p {
+    font-size: 1.5rem;
+    /* font-family: 'Pixelify Sans', cursive; */
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Roboto', sans-serif;
+}
+
+.text_Stuff span{
+    color: #353b8d;
+}
+
+.text_Stuff img{
+    position: absolute;
+    height: 50%;
+    margin-left: 25%;
+    margin-top: 8%;
+    z-index: -1;
+}
+
+
+.input_area{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+}
+
+.file_input
+{
+    margin-bottom: 2rem;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.Upload_btn{
+  width: 25rem;
+}
+
+#top_btn{
+  margin-top: 2rem;
+}
+
+/* form{
+  width: 25rem;
+} */
+
+input{
+  padding: 1rem;
+
+}
+
+input[type="file"] {
+  position: relative;
+  width: 25rem;
+  background-color: rgba(255, 255, 255, 0.183);
+  border-radius: 25px;
+}
+
+input[type="file"]::file-selector-button {
+  width: 150px;
+  color: transparent;
+}
+
+/* Faked label styles and icon */
+input[type="file"]::before {
+  position: absolute;
+  pointer-events: none;
+  top: 30px;
+  left: 45px;
+  height: 20px;
+  width: 20px;
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230964B0'%3E%3Cpath d='M18 15v3H6v-3H4v3c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-3h-2zM7 9l1.41 1.41L11 7.83V16h2V7.83l2.59 2.58L17 9l-5-5-5 5z'/%3E%3C/svg%3E");
+}
+
+input[type="file"]::after {
+  position: absolute;
+  pointer-events: none;
+  top: 33px;
+  left: 5rem;
+  color: #0964b0;
+  content: "Upload File";
+}
+
+/* ------- From Step 1 ------- */
+
+/* file upload button */
+input[type="file"]::file-selector-button {
+  border-radius: 4px;
+  padding: 0 16px;
+  height: 3rem;
+  width: 12.5rem;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+  margin-right: 16px;
+  transition: background-color 200ms;
+  border-radius: 25px;
+}
+
+/* file upload button hover state */
+input[type="file"]::file-selector-button:hover {
+  background-color: #c9dbff;
+}
+
+/* file upload button active state */
+input[type="file"]::file-selector-button:active {
+  background-color: #e5e7eb;
+}
+  /* ====================================================================================================================================================================== */
+  /* ====================================================================================================================================================================== */
+  /* ====================================================================================================================================================================== */
+.container {
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 5px;
+    background-color: #f7ffff69;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+  
+.header {
+    flex: 1;
+    width: 100%;
+    border: 2px dashed royalblue;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+  
+.header svg {
+    height: 100px;
+}
+  
+.header p {
+    text-align: center;
+    color: black;
+}
+  
+.footer {
+    background-color: rgba(0, 110, 255, 0.075);
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: black;
+    border: none;
+}
+  
+.footer svg {
+    height: 130%;
+    fill: royalblue;
+    background-color: rgba(70, 66, 66, 0.103);
+    border-radius: 50%;
+    padding: 2px;
+    cursor: pointer;
+    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.205);
+}
+  
+.footer p {
+    flex: 1;
+    text-align: center;
+}
+  
+#file {
+    display: none;
+}
+
+  /* ====================================================================================================================================================================== */
+  /* ====================================================================================================================================================================== */
+  /* ====================================================================================================================================================================== */
+
+form button {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 0.9rem 2rem;
+    margin: 0.5rem;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    font-size: 17px;
+    border-radius: 500px;
+    overflow: hidden;
+    background: #00bfdc;
+    color: ghostwhite;
+}
+   
+form button span {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    z-index: 10;
+    transition: color 0.4s;
+}
+   
+form button:hover span {
+    color: black;
+}
+   
+form button::before,
+   button::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+   
+form button::before {
+    content: "";
+    background: #1b5dac;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+   
+form button:hover::before {
+    transform: translate3d(100%, 0, 0);
+}
+   
