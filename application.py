@@ -13,9 +13,9 @@ UPLOAD_FOLDER = './uploads/'
 UPLOAD_KEY = './key/'
 ALLOWED_EXTENSIONS = set(['pem'])
 
-app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-app.config['UPLOAD_KEY'] = UPLOAD_KEY
+application = Flask(__name__)
+application.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+application.config['UPLOAD_KEY'] = UPLOAD_KEY
 
 #port = int(os.getenv('PORT', 8000))
 
@@ -39,7 +39,7 @@ def start_decryption():
     return render_template('restore_success.html')
 
 
-@app.route('/return-key')
+@application.route('/return-key')
 def return_key():
     print("reached")
     list_directory = tools.list_dir('key')
@@ -48,7 +48,7 @@ def return_key():
     return send_file(filename, download_name="My_Key.pem", as_attachment=True)
 
 
-@app.route('/return-file/')
+@application.route('/return-file/')
 def return_file():
     list_directory = tools.list_dir('restored_file')
     filename = './restored_file/' + list_directory[0]
@@ -58,34 +58,34 @@ def return_file():
     return send_file(filename, download_name=list_directory[0], as_attachment=True)
 
 
-@app.route('/download/')
+@application.route('/download/')
 def downloads():
     return render_template('download.html')
 
 
-@app.route('/about')
+@application.route('/about')
 def about():
     return render_template('about.html')
 
 
-@app.route('/upload')
+@application.route('/upload')
 def call_page_upload():
     return render_template('upload.html')
 
 
-@app.route('/home')
+@application.route('/home')
 def back_home():
     tools.empty_folder('key')
     tools.empty_folder('restored_file')
     return render_template('index.html')
 
 
-@app.route('/')
+@application.route('/')
 def index():
     return render_template('index.html')
 
 
-@app.route('/data', methods=['GET', 'POST'])
+@application.route('/data', methods=['GET', 'POST'])
 def upload_file():
     tools.empty_folder('uploads')
     if request.method == 'POST':
@@ -101,12 +101,12 @@ def upload_file():
             return 'NO FILE SELECTED'
         if file:
             filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], file.filename))
+            file.save(os.path.join(application.config['UPLOAD_FOLDER'], file.filename))
             return start_encryption()
         return 'Invalid File Format !'
 
 
-@app.route('/download_data', methods=['GET', 'POST'])
+@application.route('/download_data', methods=['GET', 'POST'])
 def upload_key():
     tools.empty_folder('key')
     if request.method == 'POST':
@@ -122,11 +122,11 @@ def upload_key():
             return 'NO FILE SELECTED'
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config['UPLOAD_KEY'], file.filename))
+            file.save(os.path.join(application.config['UPLOAD_KEY'], file.filename))
             return start_decryption()
         return 'Invalid File Format !'
 
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=8000, debug=True)
-    # app.run()
+    application.run(host='127.0.0.1', port=8000, debug=True)
+    # application.run()
